@@ -1,26 +1,35 @@
 <template>
   <div class="app-bar">
-    <SocialIcons />
-    <simple-media-player />
-    <SiteSettings />
+    <div class="social-icons-container"><SocialIcons /></div>
+    <div class="media-player-container"><SimpleMediaPlayer /></div>
+    <div class="site-settings-container"><SiteSettings /></div>
   </div>
 </template>
 <style lang="scss">
 .app-bar {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  height: 40px;
+  height: 44px;
   background-color: #eaeaea;
 
-  .social-icons {
+  > * {
+    container-type: inline-size;
+    border: 2px dotted blue;
   }
-  .btn-site-settings {
-    margin-left: auto;
-    margin-right: 0.75rem;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid red;
+
+  .social-icons-container,
+  .site-settings-container {
+    flex: 1 1 15%;
+  }
+  .media-player-container {
+    flex: 1 1 70%;
+    min-width: 300px;
+    text-align: center;
+  }
+  .site-settings-container {
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
   }
 }
 </style>

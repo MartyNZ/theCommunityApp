@@ -14,7 +14,8 @@
 <style lang="scss" scoped>
 .simple-media-player {
   audio {
-    // margin-inline: auto;
+    height: 40px;
+    padding-block: 2px;
   }
 }
 </style>

@@ -19,7 +19,7 @@
 
 <style lang="scss">
 #main-layout {
-  margin-bottom: 9rem;
+  // margin-bottom: 9rem;
 
   > * {
     container-type: inline;
@@ -32,7 +32,6 @@
   .content-container {
   }
   .footer-container {
-    margin-top: auto;
   }
 }
 </style>
