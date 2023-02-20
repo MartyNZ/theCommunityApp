@@ -1,0 +1,25 @@
+@use '../abstracts' as a;
+
+
+:root {
+    
+    @each $screen-size, $font-size in a.$type-scale {
+        @if $screen-size == sm {
+            @each $size, $value in $font-size {
+                --fs-#{$size}: #{$value};
+            }
+        } @else if $screen-size == md {
+            @include a.mq(md) {
+                @each $size, $value in $font-size {
+                    --fs-#{$size}: #{$value};
+                }
+            }            
+        } @else if $screen-size == lg {
+            @include a.mq(lg) {
+                @each $size, $value in $font-size {
+                    --fs-#{$size}: #{$value};
+                }
+            }
+        }
+    }
+}

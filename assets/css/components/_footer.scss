@@ -1,0 +1,151 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colours' as *;
+
+.footer {
+    margin-top:auto;
+    background-color: clr(dark, dark);
+    color: clr(secondary, dark);
+    padding-top:1rem;
+
+    .site-map {
+        font-size: .85rem;
+        font-weight: 400;
+
+        a {
+            text-decoration:none;
+
+            &:hover {
+                text-decoration: underline;
+                color: $white;
+            }
+        }
+    }
+
+    .site-map h3,
+    .site-map a {
+        color: clr(secondary, dark);
+    }
+
+    .site-map ul {
+        list-style-type: none;
+        padding-left:0;
+    }
+    .site-map ul ul {
+        padding-left: 1rem;
+    }
+
+}
+
+// STYLE THE CONTACT-BOX CONTENT 
+.contact-box {
+    position: relative;
+
+    &__icon {
+       width: 2rem;
+       stroke: clr(secondary, dark); 
+       padding-top: 0.5rem;
+
+       @include mq(sm) {
+        width: 2rem;
+       }
+    }
+
+
+    &__info {
+        padding: 0.4rem;
+        font-weight: 600;
+        
+
+
+        &--title {
+            color: clr(secondary, dark);
+            text-decoration: none;
+            font-size: 1rem;
+
+            @include mq(sm) {
+                font-size: 1rem;
+               }
+
+        }
+
+        &--subtitle {
+            font-size: 0.8rem;
+            color: clr(secondary, dark);
+            text-decoration: none;
+
+            @include mq(sm) {
+                font-size: 1rem;
+               }
+            
+        }
+    }
+    a {
+        color: clr(secondary, light);
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    &__social {
+        width: 3rem;
+        stroke: clr(secondary, light); 
+
+        a {
+        margin: 0 0.5rem;
+        }
+    }   
+}
+
+// STYLE THE COPYRIGHT  CONTENT 
+.footer-bottom {
+    background-color: $black;
+
+    .container-fluid {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        color: $secondary;
+        font-weight: 300;
+        font-size:small;
+        
+
+        a {
+            color: $secondary;
+            text-decoration: none;
+
+            &:hover {
+                color: $light;
+                text-decoration: underline;
+             
+            }
+        }
+    }
+    @media (max-width: 28em) {
+        .container-fluid {
+            display:block;
+            div {
+                padding-bottom:0.125em;
+            }
+        }
+    }
+}
+
+
+// STYLE THE BACK TO TOP BUTTON 
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+
+    i {
+        color: $light;
+        font-size: 1rem;
+        @include absoluteCenter;
+    }
+}

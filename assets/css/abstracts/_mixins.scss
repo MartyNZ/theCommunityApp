@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'colours' as *;
+
+// GRADIENT MIXIN 
+@mixin gradient {
+    background: linear-gradient(to right, clr(primary), clr(primary, dark));
+}
+
+@mixin alt-gradient {
+    background: linear-gradient(to left, clr(primary, dark), clr(primary));
+}
+
+// ABSOLUTE CENTER 
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// TRANSITION PROPERTY 
+@mixin transitionProperty {
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+$breakpoints: (
+    xs: 28em,
+    sm: 40em,
+    md: 62em,
+    lg: 75em,
+);
+
+@mixin mq($key) {
+    $size: map-get($breakpoints, $key);
+
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}

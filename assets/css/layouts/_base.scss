@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/colours' as *;
+html {
+  height: 100%;
+  
+  .skip-nav-link {
+    background: $dark;
+    color: $light;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 0.25rem 0;
+    text-decoration: none;
+    position: absolute;
+    transform:translateY(-120%);
+    transition: transform 325ms ease-in;
+    z-index: 9999;
+
+    &:hover {
+      text-decoration: underline;
+      color: $white;
+    }
+
+    &:focus {
+      transform:translateY(0);
+    }
+  }
+  .img {
+    width:100%;
+    height: auto;
+  }
+  body {
+    background-color: $light;
+    min-height: 100%;
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    
+    .main {
+      min-height: 100%;
+      position: relative;
+      margin-top:5.75em;
+      margin-bottom: 2rem;
+    }
+    .page-lead {
+      text-align: center;
+    }
+
+    .byline {
+      text-align: center;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width:inherit;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $light;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(clr(primary, dark), clr(secondary), clr(primary));
+    border:.125rem solid clr(primary, dark);
+    // border-radius: 1px;
+  }
+
+  .post-tag {
+    text-decoration:none;
+  }
+    .post-tag::before {
+    content: '# '
+  }
+}

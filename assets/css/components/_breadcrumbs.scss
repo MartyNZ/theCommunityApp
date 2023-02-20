@@ -1,0 +1,17 @@
+.crumb a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
+.crumb {
+    &::after {
+        content: ' >>';
+    }
+    
+    &:last-of-type::after {
+        content: '';
+    }
+}

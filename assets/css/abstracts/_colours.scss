@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+$colours: (
+    primary: (
+        base: $primary,
+        light: lighten($primary, $lighten),
+        dark: darken($primary, $darken),
+    ),
+    secondary: (
+        base: $secondary,
+        light: lighten($secondary, $lighten),
+        dark: darken($secondary, $darken),
+    ),
+    dark: (
+        base: $dark,
+        light: lighten($dark, $lighten),
+        dark: darken($dark, $darken),
+    )
+);
+@function clr($base, $shade: base){
+    $colour: map-get(map-get($colours, $base), $shade);
+    @return $colour;
+}

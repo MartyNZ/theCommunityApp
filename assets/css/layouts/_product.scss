@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+#products-list {
+    display: block;
+}
+@include mq(sm) {
+    #products-list {
+        display: flex;
+        gap:.75rem
+    }
+}
+
+#product {
+
+
+}

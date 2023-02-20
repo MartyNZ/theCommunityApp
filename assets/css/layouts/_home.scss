@@ -1,0 +1,137 @@
+/*  Grid Areas */
+.home-grid{
+    display:grid;
+    gap:0.25em;
+    height:100vh;
+    grid-template-rows: repeat(12,1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "wmk"
+        "hrn"
+        "kkr"
+        "l-f"
+        "comm"
+        "sprt"
+        "nat"
+        "evt"
+        "misc-1"
+        "misc-2"
+        "misc-3"
+        "misc-4"
+}
+
+@media(min-width:560px){
+    .home-grid{
+        display:grid;
+        gap:0.25em;
+        height:100vh;
+        grid-template-rows: repeat(10,1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            ". wmk wmk ."
+            "hrn hrn kkr kkr"
+            "l-f l-f l-f l-f"
+            ". comm comm ."
+            ". sprt sprt ."
+            ". nat nat ."
+            "evt evt evt evt"
+            "misc-1 misc-1 misc-2 misc-2"
+            "misc-3 misc-3 misc-4 misc-4"
+    }
+}
+
+@media(min-width:800px){
+        .home-grid{
+            display:grid;
+            gap:0.25em;
+            height:100vh;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-areas:
+                "wmk wmk wmk wmk hrn hrn hrn hrn kkr kkr kkr kkr"
+                "l-f l-f l-f l-f l-f l-f l-f comm comm comm comm comm"
+                "l-f l-f l-f l-f l-f l-f l-f sprt sprt sprt sprt sprt"
+                "l-f l-f l-f l-f l-f l-f l-f nat nat nat nat nat"
+                "evt evt evt evt misc-1 misc-1 misc-1 misc-1 misc-2 misc-2 misc-2 misc-2"
+                "evt evt evt evt misc-3 misc-3 misc-3 misc-3 misc-4 misc-4 misc-4 misc-4"
+        }
+    }
+    
+@media(min-width:1280px){
+    .home-grid{
+        max-width:80em;
+        margin:auto;
+        display:grid;
+        gap:0.25em;
+        height:100vh;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "wmk wmk wmk wmk hrn hrn hrn hrn kkr kkr kkr kkr"
+            "l-f l-f l-f l-f l-f comm comm comm comm evt evt evt"
+            "l-f l-f l-f l-f l-f sprt sprt sprt sprt evt evt evt"
+            "l-f l-f l-f l-f l-f nat nat nat nat evt evt evt"
+            "misc-1 misc-1 misc-1 misc-2 misc-2 misc-2 misc-3 misc-3 misc-3 misc-4 misc-4 misc-4"
+    }
+}
+
+.home-grid-item {
+    display:flex; 
+    justify-content:center;
+    align-items: center;
+    transition: 250ms;
+}
+
+.waimakariri {
+    grid-area: wmk;
+}
+
+.hurunui {
+    grid-area: hrn;
+}
+
+.kaikoura {
+    grid-area: kkr;
+}
+
+.latest-feature {
+    background-color:brown;
+    grid-area: l-f;
+}
+
+.community {
+    background-color: cornflowerblue;
+    grid-area:comm;
+}
+
+.sports {
+    background-color: cornflowerblue;
+    grid-area: sprt;
+}
+
+.national {
+    background-color: cornflowerblue;
+    grid-area: nat;
+}
+
+.events {
+    grid-area: evt;
+}
+
+.misc-1 {
+    grid-area: misc-1;
+}
+
+.misc-2 {
+    grid-area: misc-2;
+}
+
+.misc-3 {
+    grid-area: misc-3;
+}
+
+.misc-4 {
+    grid-area: misc-4;
+}
+
+/*  End Grid Areas */
