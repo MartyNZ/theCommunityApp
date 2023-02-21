@@ -1,9 +1,7 @@
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faUsersViewfinder,
-  faCircleEllipsisVertical,
-} from "@fortawesome/pro-duotone-svg-icons";
+import { faUsersViewfinder } from "@fortawesome/pro-duotone-svg-icons";
+import { faCircleEllipsisVertical } from "@fortawesome/pro-light-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faFacebook, faYoutube, faUsersViewfinder, faCircleEllipsisVertical);

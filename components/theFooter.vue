@@ -1,6 +1,6 @@
 <template>
   <div class="site-footer">
-    <h3 class="title">Community</h3>
+    <h3 class="title">Compass FM Community</h3>
     <PrimaryNavigation />
   </div>
 </template>
@@ -9,10 +9,8 @@
 
 <style lang="scss" scoped>
 .site-footer {
-  // margin-top: 2rem;
   border-top: 1px solid #bdbdbd;
   background-color: #eaeaea;
-  // padding-top: 0.5rem;
 
   .title {
     text-align: center;

@@ -4,6 +4,7 @@
       <a href="#" class="menu-tab">News</a>
       <a href="#" class="menu-tab">Events</a>
       <a href="#" class="menu-tab">Groups</a>
+      <a href="#" class="menu-tab">About</a>
     </div>
   </div>
 </template>
