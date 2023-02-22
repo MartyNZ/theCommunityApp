@@ -2,7 +2,7 @@
   <div class="app-bar">
     <div class="title-container"><SiteTitle /></div>
     <div class="media-player-container"><SimpleMediaPlayer /></div>
-    <div class="site-settings-container"><SiteSettings /></div>
+    <div class="app-tools-container"><AppTools /></div>
   </div>
 </template>
 <style lang="scss">
@@ -15,7 +15,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: var(--appbar-hgt-md) var(--appbar-hgt-md);
   grid-template-areas:
-    "title settings"
+    "title app-tools"
     "media media";
 
   > * {
@@ -33,18 +33,15 @@
     min-width: 300px;
     text-align: center;
   }
-  .site-settings-container {
-    grid-area: settings;
-    text-align: right;
-    padding-right: 1rem;
-    padding-top: 0.25rem;
+  .app-tools-container {
+    grid-area: app-tools;
   }
 }
-@media screen and (width >= 600px) {
+@media screen and (width >= 700px) {
   .app-bar {
     height: var(--appbar-hgt-md);
-    grid-template-columns: 15% 1fr 15%;
-    grid-template-areas: "title media settings";
+    grid-template-columns: 28% 1fr 28%;
+    grid-template-areas: "title media app-tools";
   }
 }
 </style>

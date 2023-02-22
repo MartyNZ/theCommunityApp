@@ -1,10 +1,14 @@
 <template>
   <div class="site-footer">
     <div class="community-title">
-      <font-awesome-icon icon="fa-duotone fa-users-viewfinder" size="2x" />
+      <div class="community-icon">
+        <font-awesome-icon icon="fa-duotone fa-users-viewfinder" size="2x" />
+      </div>
       <h3 class="title">Compass FM Community</h3>
     </div>
-    <font-awesome-icon icon="fa-duotone fa-arrow-up-from-bracket" size="2x" />
+    <div class="nav-open-close-icon">
+      <font-awesome-icon icon="fa-duotone fa-angles-up" size="2x" />
+    </div>
   </div>
 </template>
 
@@ -30,6 +34,7 @@
       text-align: left;
       font-size: 1.5rem;
       font-style: italic;
+      line-height: 1.1;
     }
   }
 }

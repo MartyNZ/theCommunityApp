@@ -1,11 +1,16 @@
 <template>
-  <div class="settings-container">
-    <TheUser />
+  <div class="app-tools">
+    <div class="user-icon">
+      <font-awesome-icon icon="fa-duotone fa-user-vneck" size="2x" />
+    </div>
+    <SignInOut />
     <div class="settings">
-      <font-awesome-icon
-        class="settings-icon"
-        icon="fa-duotone fa-circle-ellipsis-vertical"
-      />
+      <div class="settings-icon">
+        <font-awesome-icon
+          icon="fa-duotone fa-circle-ellipsis-vertical"
+          size="2x"
+        />
+      </div>
       <ul class="settings-menu" aria-labelledby="dropdownMenuButton2">
         <h6 class="settings-menu__title">Site Settings</h6>
         <li>
@@ -31,10 +36,14 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.settings-container {
+.app-tools {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, calc(2rem + 2px));
+  justify-items: center;
+  padding-inline: 1rem;
+  gap: 1rem;
+
+  margin-left: auto;
   .settings {
     position: relative;
     display: block;
@@ -49,14 +58,12 @@
     }
 
     &-icon {
-      height: 30px;
-      width: 30px;
-      margin: 1px;
       transition: transform ease-out 500ms;
     }
 
     &-menu {
       position: absolute;
+      top: 3rem;
       right: 0;
       background-color: var(--clr-secondary);
       list-style-type: none;

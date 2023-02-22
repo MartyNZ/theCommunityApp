@@ -2,7 +2,7 @@
   <div class="primary-navigation-container">
     <div class="tab-group">
       <a href="#" class="menu-tab"
-        ><font-awesome-icon icon="fa-duotone fa-newspaper" size="6x" fa-inverse
+        ><font-awesome-icon icon="fa-duotone fa-newspaper" size="6x"
       /></a>
       <a href="#" class="menu-tab">Events</a>
       <a href="#" class="menu-tab">Groups</a>

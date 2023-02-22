@@ -7,6 +7,11 @@ import {
   faCircleEllipsisVertical,
   faNewspaper,
   faArrowUpFromBracket,
+  faAnglesUp,
+  faAnglesDown,
+  faAnglesLeft,
+  faAnglesRight,
+  faUserVneck,
 } from "@fortawesome/pro-duotone-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -18,7 +23,12 @@ library.add(
   faRightToBracket,
   faRightFromBracket,
   faNewspaper,
-  faArrowUpFromBracket
+  faArrowUpFromBracket,
+  faAnglesUp,
+  faAnglesDown,
+  faAnglesLeft,
+  faAnglesRight,
+  faUserVneck
 );
 
 // This is important, we are going to let Nuxt worry about the CSS
