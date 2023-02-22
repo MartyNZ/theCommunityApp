@@ -16,6 +16,7 @@
 
 <style lang="scss" scoped>
 .site-footer {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
   border-top: 1px solid #bdbdbd;
@@ -36,6 +37,20 @@
       font-style: italic;
       line-height: 1.1;
     }
+  }
+
+  .nav-open-close-icon {
+    position: absolute;
+    background-color: var(--clr-primary);
+    width: 3rem;
+    height: 3rem;
+    right: 1rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    transform: translateY(-1.75rem);
   }
 }
 @media screen and (width > 400px) {
