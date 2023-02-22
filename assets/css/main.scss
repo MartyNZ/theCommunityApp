@@ -3,3 +3,26 @@
 @use "./abstracts" as *;
 @use "./base" as *;
 @use "./utilities" as *;
+
+:root {
+  --clr-primary: #{$primary};
+  --clr-secondary: #{$secondary};
+  --clr-warning: #{$warning};
+  --clr-success: #{$success};
+  --clr-info: #{$info};
+  --clr-danger: #{$danger};
+  --clr-light: #{$light};
+  --clr-dark: #{$dark};
+
+  --clr-white: #{$white};
+  --clr-gray-100: #{$gray-100};
+  --clr-gray-200: #{$gray-200};
+  --clr-gray-300: #{$gray-300};
+  --clr-gray-400: #{$gray-400};
+  --clr-gray-500: #{$gray-500};
+  --clr-gray-600: #{$gray-600};
+  --clr-gray-700: #{$gray-700};
+  --clr-gray-800: #{$gray-800};
+  --clr-gray-900: #{$gray-900};
+  --clr-black: #{$black};
+}

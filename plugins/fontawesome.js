@@ -1,10 +1,25 @@
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faUsersViewfinder } from "@fortawesome/pro-duotone-svg-icons";
-import { faCircleEllipsisVertical } from "@fortawesome/pro-light-svg-icons";
+import {
+  faUsersViewfinder,
+  faRightToBracket,
+  faRightFromBracket,
+  faCircleEllipsisVertical,
+  faNewspaper,
+  faArrowUpFromBracket,
+} from "@fortawesome/pro-duotone-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faFacebook, faYoutube, faUsersViewfinder, faCircleEllipsisVertical);
+library.add(
+  faFacebook,
+  faYoutube,
+  faUsersViewfinder,
+  faCircleEllipsisVertical,
+  faRightToBracket,
+  faRightFromBracket,
+  faNewspaper,
+  faArrowUpFromBracket
+);
 
 // This is important, we are going to let Nuxt worry about the CSS
 config.autoAddCss = false;

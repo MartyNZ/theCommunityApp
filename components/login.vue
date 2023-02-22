@@ -1,8 +1,8 @@
 <template>
-  <div class="">
-    <h2 class="">Login</h2>
+  <div class="login-form-container">
+    <h2 class="title">Login</h2>
     <form>
-      <div class="">
+      <div class="form-group">
         <label for="exampleInputEmail2" class="form-label">Email address</label>
         <input
           type="email"
@@ -12,7 +12,7 @@
           placeholder="Enter email"
         />
       </div>
-      <div class="form-group mb-6">
+      <div class="form-group">
         <label for="exampleInputPassword2" class="form-label">Password</label>
         <input
           type="password"
@@ -41,4 +41,11 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.login-form-container {
+  display: grid;
+  place-items: center;
+  max-width: 1264px;
+  margin-inline: auto;
+}
+</style>
