@@ -12,6 +12,7 @@ import {
   faAnglesLeft,
   faAnglesRight,
   faUserVneck,
+  faSunCloud,
 } from "@fortawesome/pro-duotone-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -28,7 +29,8 @@ library.add(
   faAnglesDown,
   faAnglesLeft,
   faAnglesRight,
-  faUserVneck
+  faUserVneck,
+  faSunCloud
 );
 
 // This is important, we are going to let Nuxt worry about the CSS

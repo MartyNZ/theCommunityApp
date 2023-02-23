@@ -1,8 +1,5 @@
 <template>
   <div class="app-tools">
-    <div class="user-icon">
-      <font-awesome-icon icon="fa-duotone fa-user-vneck" size="2x" />
-    </div>
     <SignInOut />
     <div class="settings">
       <div class="settings-icon">
@@ -26,7 +23,7 @@
           <hr class="settings-menu__hr" />
         </li>
         <li>
-          <a class="settings-menu__item" href="#">Separated link</a>
+          <a class="settings-menu__item" href="/about">About the project</a>
         </li>
       </ul>
     </div>
@@ -37,35 +34,32 @@
 
 <style lang="scss" scoped>
 .app-tools {
-  display: grid;
-  grid-template-columns: repeat(3, calc(2rem + 2px));
-  justify-items: center;
-  padding-inline: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
   gap: 1rem;
+  padding-right: 0.75rem;
 
-  margin-left: auto;
   .settings {
     position: relative;
     display: block;
-    width: 32px;
 
-    &:hover .settings-menu {
-      transform: translateX(0);
-    }
-
-    &:hover .settings-icon {
-      transform: rotate(270deg);
+    &-menu {
+      background-color: var(--clr-secondary);
+      z-index: 100;
     }
 
     &-icon {
+      width: 32px;
+      height: 32px;
       transition: transform ease-out 500ms;
     }
 
     &-menu {
       position: absolute;
-      top: 3rem;
+      top: 2.5rem;
       right: 0;
-      background-color: var(--clr-secondary);
+      background-color: var(--clr-gray-300);
       list-style-type: none;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -73,7 +67,8 @@
       padding-block: 0.5rem;
       margin: 0;
       min-width: max-content;
-      box-shadow: 5px 5px 10px 2px #c3c3c3;
+      box-shadow: 3px 3px 5px 3px #888;
+      text-align: left;
 
       transform: translateX(125%);
       transition: transform ease-out 500ms;
@@ -90,10 +85,16 @@
         padding-inline: 1rem;
 
         &:hover {
-          background: #222;
-          color: #fff;
+          background: clr(var(--clr-secondary, dark));
         }
       }
+    }
+    &:hover .settings-menu {
+      transform: translateX(0);
+    }
+
+    &:hover .settings-icon {
+      transform: rotate(270deg);
     }
   }
 }

@@ -1,72 +1,78 @@
 <template>
-  <div id="main-layout">
-    <div class="app-bar-container">
-      <AppBar />
+  <div class="main">
+    <div id="main-layout">
+      <div class="app-bar-container">
+        <AppBar />
+      </div>
+      <div v-if="$route.fullPath === '/'" class="header-container">
+        <TheHeader />
+      </div>
+      <div class="content-container">
+        <NuxtPage />
+      </div>
     </div>
-    <div v-if="$route.fullPath === '/'" class="header-container">
-      <TheHeader />
+    <div class="site-nav-container">
+      <SiteNavMenu />
     </div>
-    <div class="content-container">
-      <NuxtPage />
-    </div>
-    <div class="footer-container">
-      <TheFooter />
-    </div>
+    <SiteNavHeader />
   </div>
 </template>
 
 <script setup></script>
 
 <style lang="scss">
-#main-layout {
-  --appbar-hgt-sm: 88px;
-  --appbar-hgt-md: 44px;
+.main {
+  position: relative;
+  #main-layout {
+    --appbar-hgt-sm: 88px;
+    --appbar-hgt-md: 44px;
 
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-    "siteAppbar"
-    "homeHeader"
-    "pageContent"
-    "siteNav";
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "siteAppbar"
+      "homeHeader"
+      "pageContent";
 
-  & > :nth-child(2) {
-    margin-top: calc(var(--appbar-hgt-sm) + 1rem);
-  }
+    & > :nth-child(2) {
+      margin-top: calc(var(--appbar-hgt-sm) + 1rem);
+    }
 
-  > * {
-    container-type: inline-size;
-  }
-  .app-bar-container {
-    background-color: #1d184c;
-    grid-area: siteAppbar;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .header-container {
-    background-color: #fff;
-    grid-area: homeHeader;
-    position: relative;
-    margin-top: calc(var(--appbar-hgt-sm) + 1rem);
-    width: 100%;
-    z-index: -1;
-  }
-  .content-container {
-    grid-area: pageContent;
-    overflow: auto;
-    z-index: -1;
-    margin-bottom: 120px;
-    width: 100%;
-  }
-  .footer-container {
-    grid-area: siteNav;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    > * {
+      container-type: inline-size;
+    }
+    .app-bar-container {
+      background-color: #1d184c;
+      grid-area: siteAppbar;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 502;
+    }
+    .header-container {
+      background-color: #fff;
+      grid-area: homeHeader;
+      position: relative;
+      margin-top: calc(var(--appbar-hgt-sm) + 1rem);
+      width: 100%;
+      z-index: -1;
+    }
+    .content-container {
+      grid-area: pageContent;
+      overflow: auto;
+      z-index: -1;
+      margin-bottom: 120px;
+      width: 100%;
+    }
+    // .footer-container {
+    //   grid-area: siteNav;
+    //   position: fixed;
+    //   bottom: 0;
+    //   width: 100%;
+    // }
   }
 }
 @media (width >= 700px) {
@@ -81,25 +87,21 @@
       z-index: -1;
       margin-bottom: 120px;
       width: 100%;
-      // margin-top: calc(var(--appbar-hgt-sm) + 1rem);
     }
   }
 }
 
 @media (width >= 1140px) {
-  #mainLayout {
-    // grid-template-columns: 1fr 2fr;
-    // grid-template-rows: auto auto 1fr;
-    grid-template-areas:
-      "siteAppbar siteAppbar"
-      "siteNav homeHeader"
-      "siteNav pageContent";
-  }
+  // #mainLayout {
+  //   grid-template-areas:
+  //     "siteAppbar siteAppbar"
+  //     "siteNav homeHeader"
+  //     "siteNav pageContent";
+  // }
 }
+
 div[class$="-icon"] {
-  width: 2rem;
-  height: 2rem;
-  margin: 0.27em;
+  width: fit-content;
   .fa-duotone-group {
     .fa-primary {
       fill: var(--clr-secondary);
@@ -116,5 +118,22 @@ div[class$="-icon"] {
       opacity: 1;
     }
   }
+}
+
+.site-nav-container {
+  position: absolute;
+  bottom: 0;
+  // height: calc(100% - var(--appbar-hgt-md));
+  width: 100vw;
+  background-color: var(--clr-gray-200);
+  z-index: 500;
+  transform: translateY(100%);
+  transition: transform ease-out 300ms;
+}
+.nav-open {
+  bottom: 0;
+  height: calc(100% - 88px);
+  transform: translateY(0);
+  transition: transform ease-out 300ms;
 }
 </style>

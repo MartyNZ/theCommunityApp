@@ -49,6 +49,10 @@
 </template>
 <style lang="scss" scoped>
 div {
-  margin: 1rem;
+  margin: 1.5rem 2em;
+
+  p {
+    text-align: justify;
+  }
 }
 </style>

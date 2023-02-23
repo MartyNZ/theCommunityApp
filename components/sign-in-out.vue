@@ -8,8 +8,8 @@
           size="2x"
         />
         <font-awesome-icon
-          class="sign-out"
-          icon="fa-duotone fa-right-from-bracket"
+          class="user-avatar"
+          icon="fa-duotone fa-user-vneck"
           size="2x"
         />
       </div>
@@ -20,11 +20,11 @@
 .sign-in {
   display: block;
 }
-.sign-out {
+.user-avatar {
   display: none;
 }
 
-.signed-in .sign-out {
+.signed-in .user-avatar {
   display: block;
 }
 

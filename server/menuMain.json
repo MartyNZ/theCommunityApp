@@ -1,0 +1,17 @@
+[
+  {
+    "title": "News",
+    "icon": "fa-newspaper",
+    "link": "#"
+  },
+  {
+    "title": "Conditions",
+    "icon": "fa-sun-cloud",
+    "link": "#"
+  },
+  {
+    "title": "Community",
+    "icon": "fa-users-viewfinder",
+    "link": "#"
+  }
+]
