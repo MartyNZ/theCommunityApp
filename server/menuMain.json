@@ -2,16 +2,37 @@
   {
     "title": "News",
     "icon": "fa-newspaper",
-    "link": "#"
+    "link": "/news",
+    "linkType": "page"
   },
   {
     "title": "Conditions",
     "icon": "fa-sun-cloud",
-    "link": "#"
+    "link": "submenu_conditions",
+    "linkType": "submenu",
+    "subMenu": [
+      {
+        "title": "",
+        "icon": "",
+        "link": "",
+        "linkType": "",
+        "subMenu": [{}]
+      }
+    ]
   },
   {
     "title": "Community",
-    "icon": "fa-users-viewfinder",
-    "link": "#"
+    "icon": "fa-people-group",
+    "link": "submenu_community",
+    "linkType": "submenu",
+    "subMenu": [
+      {
+        "title": "",
+        "icon": "",
+        "link": "",
+        "linkType": "",
+        "subMenu": [{}]
+      }
+    ]
   }
 ]

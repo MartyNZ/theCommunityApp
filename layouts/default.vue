@@ -121,19 +121,20 @@ div[class$="-icon"] {
 }
 
 .site-nav-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   // height: calc(100% - var(--appbar-hgt-md));
   width: 100vw;
   background-color: var(--clr-gray-200);
   z-index: 500;
   transform: translateY(100%);
-  transition: transform ease-out 300ms;
+  transition: transform ease-in 400ms;
 }
 .nav-open {
-  bottom: 0;
-  height: calc(100% - 88px);
+  // bottom: 0;
+  height: calc(100% - 156px);
+  bottom: 68px;
   transform: translateY(0);
-  transition: transform ease-out 300ms;
+  transition: transform ease-out 400ms;
 }
 </style>
