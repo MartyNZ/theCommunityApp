@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Contribute",
+    "icon": "fa-hand-holding-heart",
+    "link": "/contribute",
+    "linkType": "page"
+  },
+  {
+    "title": "About",
+    "icon": "fa-circle-info",
+    "link": "/about",
+    "linkType": "page"
+  },
+  {
+    "title": "Contact",
+    "icon": "fa-envelope",
+    "link": "/contact",
+    "linkType": "page"
+  }
+]

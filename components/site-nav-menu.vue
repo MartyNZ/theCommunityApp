@@ -1,21 +1,37 @@
 <script setup>
-import menuMain from "~/server/menuMain.json";
-import { ref } from "vue";
+import mainNav from "~/server/mainNav.json";
+import systemNav from "~/server/systemNav.json";
+// import { ref } from "vue";
 
-const mainMenu = menuMain;
+const mainMenu = mainNav;
+const systemMenu = systemNav;
+
 const mainTitle = ref("How may I direct your call?");
 
-const setMainTitle = (title, type) => {
+const setMainTitle = (link, title, type) => {
   mainTitle.value = title;
   const linkType = type;
   if (linkType === "page") {
     // open page
+    window.location.href = link;
     // toggle .nav-open
+    toggleNav();
     console.log(linkType);
   } else {
     // open submenu
+
+    // toggleNav();
     console.log(linkType);
   }
+};
+const toggleNav = () => {
+  const setNav = document.getElementsByClassName("site-nav-container")[0];
+  setNav.classList.toggle("nav-open");
+
+  const setNavBtn = document.getElementsByClassName(
+    "site-nav__header-open-close-icon"
+  )[0];
+  setNavBtn.classList.toggle("toggle-icon");
 };
 </script>
 
@@ -31,31 +47,21 @@ const setMainTitle = (title, type) => {
         <font-awesome-icon
           :icon="`fa-thin ${item.icon}`"
           class="site-nav__grid-item-icon"
-          @click="setMainTitle(item.title, item.linkType)"
+          @click="setMainTitle(item.link, item.title, item.linkType)"
         /><span class="site-nav__system-item-title">{{ item.title }}</span>
       </div>
     </div>
     <div class="site-nav__system">
-      <div class="site-nav__system-item">
+      <div
+        class="site-nav__system-item"
+        v-for="item in systemMenu"
+        :key="item.title"
+      >
         <font-awesome-icon
-          icon="fa-thin fa-hand-holding-heart"
+          :icon="`fa-thin ${item.icon}`"
           class="site-nav__system-item-icon"
-          @click="setMainTitle('How you can Contribute', 'page')"
-        /><span class="site-nav__system-item-title">Contribute</span>
-      </div>
-      <div class="site-nav__system-item">
-        <font-awesome-icon
-          icon="fa-thin fa-circle-info"
-          class="site-nav__system-item-icon"
-          @click="setMainTitle('About Us', 'page')"
-        /><span class="site-nav__system-item-title">About</span>
-      </div>
-      <div class="site-nav__system-item">
-        <font-awesome-icon
-          icon="fa-thin fa-envelope"
-          class="site-nav__system-item-icon"
-          @click="setMainTitle('Contact Us', 'page')"
-        /><span class="site-nav__system-item-title">Contact</span>
+          @click="setMainTitle(item.link, item.title, item.linkType)"
+        /><span class="site-nav__system-item-title">{{ item.title }}</span>
       </div>
     </div>
   </div>
