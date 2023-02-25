@@ -19,6 +19,9 @@ import {
   faEnvelope,
   faCircleInfo,
   faHandHoldingHeart,
+  faCalendarStar,
+  faHospital,
+  faAddressBook,
 } from "@fortawesome/pro-thin-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -40,7 +43,10 @@ library.add(
   faPeopleGroup,
   faEnvelope,
   faCircleInfo,
-  faHandHoldingHeart
+  faHandHoldingHeart,
+  faCalendarStar,
+  faHospital,
+  faAddressBook
 );
 
 // This is important, we are going to let Nuxt worry about the CSS

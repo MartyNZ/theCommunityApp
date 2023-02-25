@@ -88,7 +88,7 @@ const toggleNav = () => {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    justify-content: space-between;
+    justify-items: start;
     max-width: 550px;
     margin-inline: auto;
   }

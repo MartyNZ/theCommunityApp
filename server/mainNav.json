@@ -34,5 +34,23 @@
         "subMenu": [{}]
       }
     ]
+  },
+  {
+    "title": "Events",
+    "icon": "fa-calendar-star",
+    "link": "/events",
+    "linkType": "page"
+  },
+  {
+    "title": "Health",
+    "icon": "fa-hospital",
+    "link": "/health",
+    "linkType": "page"
+  },
+  {
+    "title": "Contacts",
+    "icon": "fa-address-book",
+    "link": "/useful-numbers",
+    "linkType": "page"
   }
 ]
