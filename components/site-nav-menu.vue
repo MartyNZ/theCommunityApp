@@ -73,6 +73,7 @@ const toggleNav = () => {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   position: relative;
+  align-items: start;
   width: 100%;
   height: 100%;
   z-index: -3;
