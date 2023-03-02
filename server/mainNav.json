@@ -12,11 +12,40 @@
     "linkType": "submenu",
     "subMenu": [
       {
-        "title": "",
-        "icon": "",
-        "link": "",
-        "linkType": "",
-        "subMenu": [{}]
+        "title": "Roads",
+        "icon": "roads",
+        "link": "#",
+        "linkType": "external"
+      },
+      {
+        "title": "Weather",
+        "icon": "weather",
+        "link": "#",
+        "linkType": "external"
+      },
+      {
+        "title": "Rivers & Tides",
+        "icon": "river",
+        "link": "#",
+        "linkType": "external"
+      },
+      {
+        "title": "GeoNet",
+        "icon": "goenet",
+        "link": "#",
+        "linkType": "external"
+      },
+      {
+        "title": "Civil Defence",
+        "icon": "civil-defence",
+        "link": "#",
+        "linkType": "external"
+      },
+      {
+        "title": "Power Outages",
+        "icon": "power",
+        "link": "#",
+        "linkType": "external"
       }
     ]
   },
