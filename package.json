@@ -1,8 +1,8 @@
 {
-  "name": "compass-fm",
-  "title": "Compass FM",
+  "name": "theCommunityApp",
+  "title": "The Community App",
   "license": "Commons Clause",
-  "version":"0.0.01-a",
+  "version": "0.0.01-a",
   "private": true,
   "scripts": {
     "build": "nuxt build",
